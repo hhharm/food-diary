@@ -1,0 +1,34 @@
+<section>
+  <div class="example-button-row">
+    <button mat-raised-button i18n (click)="select(0)">Белок</button>
+    <button mat-raised-button i18n (click)="select(1)" color="primary">
+      Углеводы
+    </button>
+    <button mat-raised-button i18n (click)="select(2)" color="accent">
+      Жиры
+    </button>
+    <button mat-raised-button i18n (click)="select(3)" color="warn">
+      Клетчатка
+    </button>
+    <button mat-raised-button i18n (click)="select(4)" color="special">
+      Вкусняшка
+    </button>
+    <button mat-raised-button i18n (click)="select(5)" color="water">
+      Вода
+    </button>
+  </div>
+</section>
+<section>
+  <table *ngIf="log.length">
+    <thead>
+      <th i18n>Дата</th>
+      <th i18n>Еда</th>
+      <th i18n>Каллории</th>
+    </thead>
+    <tr *ngFor="let record of log; trackBy: trackByDateFn">
+      <td>{{ record.date | date: "dd.mm.yyyy HH:mm:ss" }}</td>
+      <td>{{ record.food }}</td>
+      <td>0</td>
+    </tr>
+  </table>
+</section>

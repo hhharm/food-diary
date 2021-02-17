@@ -1,0 +1,70 @@
+<div *ngIf="isMobile$ | async as opt">
+  <p i18n>
+    <span>Вес: </span>
+    <mat-form-field class="example-form-field">
+      <input matInput type="number" [(ngModel)]="weight" />
+    </mat-form-field>
+  </p>
+  <div class="w-stats__block" [class._mobile]="opt.mobile">
+    <div class="w-stats__coeff" [class._mobile]="opt.mobile">
+      <p i18n><span>Коэффициент: </span>{{ data.input.activityCoeff }}</p>
+      <mat-button-toggle-group
+        #group="matButtonToggleGroup"
+        (change)="changeCoeff($event)"
+        [vertical]="opt.mobile"
+      >
+        <mat-button-toggle
+          value="1.2"
+          aria-label="Пассивный"
+          title="Cидячяя работа и малоподвижный образ жизни"
+        >
+          <span class="w_wrappable">Устричка</span>
+        </mat-button-toggle>
+        <mat-button-toggle
+          value="1.37"
+          aria-label="Умеренная активность"
+          title="Спорт пару раз в неделю, небольшая зарядки, пешие прогулки"
+        >
+          <span class="w_wrappable">Полуактивная картошка</span>
+        </mat-button-toggle>
+        <mat-button-toggle
+          value="1.55"
+          aria-label="Интенсивные упражнения"
+          title="Регулярные тренировки 3-4 раза в неделю"
+        >
+          <span class="w_wrappable">Суперактивная картошка</span>
+        </mat-button-toggle>
+        <mat-button-toggle
+          value="1.7"
+          aria-label="Очень интенсивные упражнения"
+          title="Спорт 5-6 раз в неделю"
+        >
+          <span class="w_wrappable">Заводной хомяк</span>
+        </mat-button-toggle>
+        <mat-button-toggle
+          value="1.9"
+          aria-label="Очень интенсивные упражнения"
+          title="Тяжелый физический труд, интенсивные ежедневные тренировки"
+        >
+          <span class="w_wrappable">Сумасшедшая пчёлка</span>
+        </mat-button-toggle>
+      </mat-button-toggle-group>
+    </div>
+    <div class="w-stats__info" [class._mobile]="opt.mobile">
+      <p i18n>
+        <span class="w-stats__fixed">Для набора: </span
+        >{{ data.stats.gain | bzu }}
+      </p>
+      <p i18n>
+        <span class="w-stats__fixed">Для поддержания: </span
+        >{{ data.stats.keep | bzu }}
+      </p>
+      <p i18n>
+        <span class="w-stats__fixed">Для похудения: </span
+        >{{ data.stats.lose | bzu }}<br />
+        {{ data.stats.lose | speed: data.stats.keep }}
+      </p>
+    </div>
+  </div>
+</div>
+<mat-divider></mat-divider>

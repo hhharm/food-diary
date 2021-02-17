@@ -1,0 +1,33 @@
+.w-stats {
+  &__fixed {
+    display: inline-block;
+    min-width: 150px;
+  }
+  &__coeff {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    margin: 10px 0;
+    &._mobile {
+      flex-direction: column-reverse;
+      display: inline-flex;
+      flex: 1 1 clap(50px, 50%, 100%);
+    }
+  }
+  &__info {
+    &._mobile {
+      padding: 10px;
+      display: inline-block;
+      flex: 1 0 45%;
+    }
+  }
+  &__block {
+    &._mobile {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+}
+.w_wrappable {
+  word-wrap: break-word;
+}
