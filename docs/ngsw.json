@@ -1,0 +1,87 @@
+{
+  "configVersion": 1,
+  "timestamp": 1613775431471,
+  "index": "https://hhharm.github.io/food-diary/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "https://hhharm.github.io/food-diary/1.8c7174b5562b1ef489a2.js",
+        "https://hhharm.github.io/food-diary/5.178576076e40147cd9b8.js",
+        "https://hhharm.github.io/food-diary/6.68fc208eb465666126e0.js",
+        "https://hhharm.github.io/food-diary/favicon.ico",
+        "https://hhharm.github.io/food-diary/index.html",
+        "https://hhharm.github.io/food-diary/main.13b716f0ddffb1b32a17.js",
+        "https://hhharm.github.io/food-diary/manifest.webmanifest",
+        "https://hhharm.github.io/food-diary/polyfills.4e8e126afdc809610c7f.js",
+        "https://hhharm.github.io/food-diary/runtime.d6430a4c63c4a23644e0.js",
+        "https://hhharm.github.io/food-diary/styles.98133b2b2cfb9c7ffd83.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "https://hhharm.github.io/food-diary/assets/icons/icon-128x128.png",
+        "https://hhharm.github.io/food-diary/assets/icons/icon-144x144.png",
+        "https://hhharm.github.io/food-diary/assets/icons/icon-152x152.png",
+        "https://hhharm.github.io/food-diary/assets/icons/icon-192x192.png",
+        "https://hhharm.github.io/food-diary/assets/icons/icon-384x384.png",
+        "https://hhharm.github.io/food-diary/assets/icons/icon-512x512.png",
+        "https://hhharm.github.io/food-diary/assets/icons/icon-72x72.png",
+        "https://hhharm.github.io/food-diary/assets/icons/icon-96x96.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "https://hhharm.github.io/food-diary/1.8c7174b5562b1ef489a2.js": "612740cb32333f6d585d3f28d46269af34c64d88",
+    "https://hhharm.github.io/food-diary/5.178576076e40147cd9b8.js": "17a1276e8244e0ff1a2503f489f61a1a2510fd2d",
+    "https://hhharm.github.io/food-diary/6.68fc208eb465666126e0.js": "fce893462231ac6c8e593a55e00edaba6a9b7a11",
+    "https://hhharm.github.io/food-diary/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "https://hhharm.github.io/food-diary/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "https://hhharm.github.io/food-diary/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "https://hhharm.github.io/food-diary/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "https://hhharm.github.io/food-diary/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "https://hhharm.github.io/food-diary/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "https://hhharm.github.io/food-diary/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "https://hhharm.github.io/food-diary/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "https://hhharm.github.io/food-diary/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "https://hhharm.github.io/food-diary/index.html": "dc5239484cb74cd321e5627ce3c07d80878afb28",
+    "https://hhharm.github.io/food-diary/main.13b716f0ddffb1b32a17.js": "d8eaadaa35d3c7ec7cebcf4daf6c89117e542b5e",
+    "https://hhharm.github.io/food-diary/manifest.webmanifest": "80721f9a91ab3ee754e3db21938da3c4d062224a",
+    "https://hhharm.github.io/food-diary/polyfills.4e8e126afdc809610c7f.js": "6f972ee9b232a3744bfac74409816e55db2ad3a0",
+    "https://hhharm.github.io/food-diary/runtime.d6430a4c63c4a23644e0.js": "853722de02c46c7b22ebafacddf4e4069b18b43f",
+    "https://hhharm.github.io/food-diary/styles.98133b2b2cfb9c7ffd83.css": "baf37aa3994f2438e0f60f4db6b7aa1a26c8168e"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
