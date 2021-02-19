@@ -9,20 +9,15 @@ import { SpeedModule } from '../../components/speed/speed.module';
 import { StatsComponent } from 'src/app/components/stats/stats.component';
 import { HistoryComponent } from 'src/app/components/history/history.component';
 import { DayCountComponent } from 'src/app/components/day-count/day-count.component';
+import { ParseFoodModule } from '../../components/parse-food/parse-food.module';
 
 @NgModule({
-  declarations: [
-    DashboardComponent,
-    StatsComponent,
-    HistoryComponent,
-    DayCountComponent,
-  ],
+  declarations: [DashboardComponent, HistoryComponent, DayCountComponent],
   imports: [
     CommonModule,
     SharedModule,
     DashboardRoutingModule,
-    BzuModule,
-    SpeedModule,
+    ParseFoodModule,
   ],
 })
 export class DashboardModule {}

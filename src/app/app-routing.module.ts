@@ -14,6 +14,11 @@ const routes: Routes = [
     redirectTo: 'dashboard',
     pathMatch: 'full',
   },
+  {
+    path: 'statistics',
+    loadChildren: () =>
+      import('./pages/kkal/kkal.module').then((m) => m.KkalModule),
+  },
 ];
 
 @NgModule({

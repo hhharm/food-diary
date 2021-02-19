@@ -1,18 +1,78 @@
-.example-button-row .mat-button-base {
-  margin: 8px 8px 8px 0;
-  &.mat-accent {
-    background-color: rgb(224, 224, 5);
-    color: rgb(0, 32, 11);
-  }
-  &.mat-warn {
-    background-color: rgb(10, 177, 10);
-  }
-  &.mat-special {
-    background-color: rgb(231, 105, 147);
-    color: white;
-  }
-  &.mat-water {
-    background-color: cornflowerblue;
-    color: rgb(255, 255, 255);
+.dc__button-row {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+  & .mat-button-base {
+    margin: 8px 8px 8px 8px;
+    border: 2px white solid;
+    &._outline {
+      border-color: #77d249;
+      box-shadow: 1px 3px 3px 3px #d9dad9;
+    }
+
+    &.mat {
+      &-protein {
+        background-color: #feffde;
+        color: rgb(42, 5, 110);
+      }
+      &-carbs {
+        background-color: #d1deff;
+        color: rgb(42, 5, 110);
+      }
+      &-fats {
+        background-color: #ffdada;
+        color: rgb(42, 5, 110);
+      }
+      &-yammi {
+        background-color: #fedeff;
+        color: rgb(42, 5, 110);
+      }
+      &-fiber {
+        background-color: #d0ffcb;
+        color: rgb(42, 5, 110);
+      }
+      &-water {
+        background-color: cornflowerblue;
+        color: rgb(255, 255, 255);
+      }
+    }
+    &.mat-save {
+      margin-left: 30px;
+      &:not(.mat-button-disabled) {
+        background-color: #009018;
+        color: rgb(255, 255, 255);
+      }
+    }
   }
 }
+.dc__record {
+  padding: 0 10px;
+}
+._bold {
+  font-weight: bold;
+}
+.dc_table {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: x-small;
+
+  & ._weak {
+    font-style: italic;
+    font-weight: lighter;
+    color: grey;
+  }
+}
+.dc_rule-buttons {
+  position: absolute;
+  bottom: 0;
+  & .mat-button-base {
+    margin: 6px;
+  }
+}
+
+// :host {
+// display: flex;
+// flex-direction: column;
+// height: 100%;
+// }
