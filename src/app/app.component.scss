@@ -6,3 +6,12 @@ main {
 p {
   font-size: clamp(1rem, 0.8269rem + 0.7692vw, 1.5rem);
 }
+:host {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  & .app-main {
+    flex-grow: 1;
+    position: relative;
+  }
+}
