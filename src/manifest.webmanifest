@@ -1,6 +1,6 @@
 {
-  "name": "waist",
-  "short_name": "waist",
+  "name": "Дневник питания",
+  "short_name": "Моё питание",
   "theme_color": "#1976d2",
   "background_color": "#fafafa",
   "display": "standalone",
