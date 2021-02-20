@@ -3,6 +3,11 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
+    path: '',
+    redirectTo: 'dashboard',
+    pathMatch: 'full',
+  },
+  {
     path: 'dashboard',
     loadChildren: () =>
       import('./pages/dashboard/dashboard.module').then(
@@ -10,15 +15,11 @@ const routes: Routes = [
       ),
   },
   {
-    path: '',
-    redirectTo: 'dashboard',
-    pathMatch: 'full',
-  },
-  {
     path: 'statistics',
     loadChildren: () =>
       import('./pages/kkal/kkal.module').then((m) => m.KkalModule),
   },
+  { path: '**', redirectTo: 'dashboard' }, // Wildcard route for a 404 page
 ];
 
 @NgModule({

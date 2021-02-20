@@ -1,0 +1,24 @@
+<mat-toolbar color="primary">
+  <div fxHide.gt-xs fxHide="false">
+    <button mat-icon-button (click)="onToggleSidenav()">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
+  <div>
+    <mat-icon>smile</mat-icon>
+  </div>
+  <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
+    <ul fxLayout fxLayoutGap="15px" class="navigation-items">
+      <li>
+        <a routerLink="/dashboard" routerLinkActive="active-link" i18n
+          >Рутина питания</a
+        >
+      </li>
+      <li>
+        <a routerLink="/statistics" routerLinkActive="active-link" i18n
+          >Подсчёт каллорий</a
+        >
+      </li>
+    </ul>
+  </div>
+</mat-toolbar>
