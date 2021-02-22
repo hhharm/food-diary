@@ -27,7 +27,7 @@ export const balanceStartValue: BalanceData = {
   input: {
     in: 0,
     activityCoeff: coeff.passive,
-    weight: 106,
+    weight: 80,
   },
   stats: {
     gain: 0,

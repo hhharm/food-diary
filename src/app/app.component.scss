@@ -6,25 +6,12 @@ main {
 p {
   font-size: clamp(1rem, 0.8269rem + 0.7692vw, 1.5rem);
 }
-:host {
-  height: 100%;
-  & .app-main {
-    height: 100%;
-    flex-grow: 1;
-    position: relative;
-  }
-}
-
-mat-sidenav-container,
-mat-sidenav-content,
+// mat-sidenav-container,
+// mat-sidenav-content,
 mat-sidenav {
   height: 100%;
 }
 
 mat-sidenav {
   width: 250px;
-}
-
-main {
-  padding: 10px;
 }

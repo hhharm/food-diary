@@ -4,12 +4,14 @@ import {
   Component,
   OnInit,
 } from '@angular/core';
+import { Observable } from 'rxjs';
 import {
   FoodKey,
   getMealType,
   getTimeDifference,
   MealRecord,
 } from 'src/app/data/food-history.data';
+import { LayoutOptions } from 'src/app/services/layout.service';
 const storageKey = 'dairyRecords';
 
 @Component({
@@ -22,8 +24,10 @@ export class DayCountComponent implements OnInit {
   public log: MealRecord[] = [];
   public tmpRecord?: MealRecord | null;
   public saveDisabled = true;
+  public comment = ' ';
+  public isMobile$?: Observable<LayoutOptions>;
 
-  public displayedColumns = ['Date', 'Food', 'MealType'];
+  public displayedColumns = ['Date', 'Food', 'MealType', 'Commentary'];
 
   constructor(private cdr: ChangeDetectorRef) {}
 
@@ -51,10 +55,11 @@ export class DayCountComponent implements OnInit {
         mealType: '',
         timeDifference: null,
       };
-      this.saveDisabled = false;
     }
 
     this.tmpRecord.food[type] = !this.tmpRecord.food[type];
+    this.saveDisabled = !Object.values(this.tmpRecord.food).filter(Boolean)
+      .length;
     this.cdr.markForCheck();
   }
 
@@ -62,23 +67,25 @@ export class DayCountComponent implements OnInit {
     if (this.tmpRecord) {
       this.tmpRecord.date = new Date();
       this.tmpRecord.mealType = getMealType(this.tmpRecord.food);
+      this.tmpRecord.commentary = this.comment;
       this.tmpRecord.timeDifference = this.log.length
         ? getTimeDifference(
             this.tmpRecord.date,
             this.log[this.log.length - 1].date
           )
         : null;
-      this.log = [...this.log, this.tmpRecord];
+      this.log = [this.tmpRecord, ...this.log];
       this.saveDisabled = true;
       localStorage.setItem(storageKey, JSON.stringify(this.log));
       this.tmpRecord = null;
+      this.comment = ' ';
       this.cdr.markForCheck();
     }
   }
 
   public undo(): void {
     if (this.log.length) {
-      this.log.pop();
+      this.log.shift();
       this.log = [...this.log];
       localStorage.setItem(storageKey, JSON.stringify(this.log));
       this.cdr.markForCheck();

@@ -38,7 +38,6 @@
       }
     }
     &.mat-save {
-      margin-left: 30px;
       &:not(.mat-button-disabled) {
         background-color: #009018;
         color: rgb(255, 255, 255);
@@ -64,15 +63,9 @@
   }
 }
 .dc_rule-buttons {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   & .mat-button-base {
     margin: 6px;
   }
 }
-
-// :host {
-// display: flex;
-// flex-direction: column;
-// height: 100%;
-// }

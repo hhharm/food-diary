@@ -13,6 +13,7 @@ export interface MealRecord {
   food: Food;
   mealType: string;
   timeDifference: string | null;
+  commentary?: string;
 }
 
 type MealType = 'Основной приём пищи' | 'Перекус';

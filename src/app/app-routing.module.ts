@@ -19,7 +19,7 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/kkal/kkal.module').then((m) => m.KkalModule),
   },
-  { path: '**', redirectTo: 'dashboard' }, // Wildcard route for a 404 page
+  { path: '**', redirectTo: 'dashboard' },
 ];
 
 @NgModule({

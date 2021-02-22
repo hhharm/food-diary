@@ -9,6 +9,7 @@ import { Observable } from 'rxjs';
 import { BalanceData, balanceStartValue } from 'src/app/data/balanse.data';
 import { CalculationsService } from 'src/app/services/calculations.service';
 import { LayoutOptions, LayoutService } from 'src/app/services/layout.service';
+const storageKey = 'statsData';
 
 @Component({
   selector: 'app-stats',
@@ -26,6 +27,7 @@ export class StatsComponent implements OnInit {
 
   set weight(newValue: number) {
     this.data.input.weight = newValue;
+    localStorage.setItem(storageKey, newValue.toString());
     this.calcStats();
   }
 
@@ -42,6 +44,10 @@ export class StatsComponent implements OnInit {
   ) {}
 
   public ngOnInit() {
+    const weight = Number(localStorage.getItem(storageKey));
+    if (weight) {
+      this.data.input.weight = weight;
+    }
     this.calcStats();
     this.isMobile$ = this.layoutService.isMobile$;
   }
