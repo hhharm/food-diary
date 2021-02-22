@@ -69,10 +69,7 @@ export class DayCountComponent implements OnInit {
       this.tmpRecord.mealType = getMealType(this.tmpRecord.food);
       this.tmpRecord.commentary = this.comment;
       this.tmpRecord.timeDifference = this.log.length
-        ? getTimeDifference(
-            this.tmpRecord.date,
-            this.log[this.log.length - 1].date
-          )
+        ? getTimeDifference(this.tmpRecord.date, this.log[0].date)
         : null;
       this.log = [this.tmpRecord, ...this.log];
       this.saveDisabled = true;
